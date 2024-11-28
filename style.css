@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --pprimary-color: #8263a3;
+    --text-dark: #232637;
+    --white: #ffffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    position: absolute;
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+body {
+    font-family: "noto sans";
+    background-color: #dbdce0;
+}
+
+body::after {
+    position: fixed;
+    content: "";
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    background-color: var(--text-dark);
+    z-index: -1;
+    animation: body-bg 1s ease-in-out forwards;
+}
+
+@keyframes body-bg {
+    0% {
+        width: 0vw;
+    }
+
+    100% {
+        width: 50vw;
+    }
+
+}
+
+body::before {
+    position: fixed;
+    content: "0";
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    font-size: 90rem;
+    font-weight: 200;
+    color: var(--white);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.container {
+    position: relative;
+    isolation: isolate;
+    max-width: var(--max-width);
+    min-height: 100vh;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    padding: 2rem 0;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+}
+
+.nav-links .logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.nav-links-left a {
+    color: var(--text-dark);
+}
+
+.nav-links-right a {
+    color: var(--white);
+}
+
+.nav-links a:hover {
+    color: var(--pprimary-color);
+}
+
+.letter-s {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45rem;
+    line-height: 40rem;
+    font-weight: 900;
+    color: var(--pprimary-color);
+}
+
+.container img {
+    position: absolute;
+    width: 100%;
+    max-width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0 50 rgba(0, 0, 0, 0.8));
+}
+
+.container h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 5rem;
+    color: var(--white);
+    letter-spacing: 25px;
+}
+
+.text-left {
+    transform: translate(calc(-50% - 250px), -50%);
+    color: #232637;
+}
+
+.text-right {
+    transform: translate(calc(-30% + 250px), -50%);
+}
+
+.container .explore {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 225px));
+    color: var(--text-dark);
+    background-color: var(--white);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+
+.container .print {
+    top: 51%;
+    right: 133px;
+    transform: translate(0, -50%) rotate(90deg);
+    padding: calc(1rem -4px) calc(2rem - 4px);
+    color: var(--white);
+    background-color: transparent;
+    border: 1px solid var(--white);
+}
+
+.container .catalog {
+    top: 50%;
+    left: 152px;
+    transform: translate(0, -50%) rotate(-90deg);
+    padding: calc(1rem -4px) calc(2rem - 4px);
+    color: var(--white);
+    background-color: transparent;
+    border: 1px solid var(--white);
+}
+
+.letter-p {
+    color: var(--text-dark);
+    font-size: 8rem;
+    position: relative;
+    left: 25px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.letter-p:hover {
+    color: var(--pprimary-color);
+    transform: rotate(15deg) scale(1.2);
+    cursor: pointer;
+}
+
+.letter-E {
+    color: var(--white);
+    font-size: 8rem;
+    top: 10px;
+    position: relative;
+    right: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.letter-E:hover {
+    color: var(--pprimary-color);
+    transform: rotate(15deg) scale(1.2);
+    cursor: pointer;
+}
+
+.print {
+    background-color: var(--white);
+}
+
+.container h5 {
+    position: absolute;
+    top: 50%;
+    font-size: 1.2rem;
+    left: 50%;
+    font-weight: 500;
+}
+
+.container h5::after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 100px;
+    height: 1px;
+}
+
+.feature1 {
+    color: var(--text-dark);
+    transform: translate(calc(-50% - 300px), calc(-50% - 200px));
+}
+
+
+.feature2 {
+    color: var(--white);
+    transform: translate(calc(-50% + 300px), calc(-50% - 200px));
+}
+
+
+.feature3 {
+    color: var(--text-dark);
+    transform: translate(calc(-50% - 300px), calc(-50% + 200px));
+}
+
+
+.feature4 {
+    color: var(--white);
+    transform: translate(calc(-50% + 300px), calc(-50% + 200px));
+}
+
+.feature1::after,
+.feature3::after {
+    right: 0;
+    transform: translate(calc(100% + 50px), 50%);
+    background-color: var(--text-dark);
+}
+
+
+.feature2::after,
+.feature4::after {
+    right: 0;
+    transform: translate(calc(-100% - 40px), 50%);
+    background-color: var(--white);
+}
+
+.footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding-inline: 1rem;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer p {
+    font-size: 1rem;
+    color: var(--text-dark);
+
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.footer-links li {
+    opacity: 0;
+    animation: fade-in 0.3s ease-in-out forwards;
+}
+
+.footer-links li:nth-child(1) {
+    animation-delay: 6s;
+}
+
+.footer-links li:nth-child(2) {
+    animation-delay: 7s;
+}
+
+.footer-links li:nth-child(3) {
+    animation-delay: 8s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.footer-links a{
+    color: var(--white);
+}
+
+.footer-links a:hover{
+    color: var(--pprimary-color);
+}
